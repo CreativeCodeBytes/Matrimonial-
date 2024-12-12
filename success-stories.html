@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SoulMatch-Success-Stories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #f4f4f4;
+        }
+
+        /* Top Nav Bar */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 10px 20px;
+        }
+
+        .top-nav .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .top-nav .auth-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .top-nav .auth-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Nav Bar styling */
+        .navbar {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+/* Hero Section */
+.hero {
+    background: url(success_images/match.avif);
+    background-size: cover;
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero .cta-button {
+    background-color: #f39c12;
+    padding: 10px 30px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+/* Features */
+.features {
+    background-color:gainsboro;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #f0f0f0;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Success Stories */
+.success-stories {
+    background-color: bisque;
+    padding: 60px 20px;
+}
+ h2{
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2rem;
+}
+ h2:hover{
+    color: #f39c12;
+}
+.profile-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.profile-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profile-card h3 {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+.profile-card p {
+    font-size: 1rem;
+    color: #555;
+}
+ /* Footer Styling */
+ .footer {
+            background:url(images/do-sharp.php);
+            background-size: cover;
+            backdrop-filter:blur;
+            width: 100%;
+            height: 200px;
+            color:black;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer .social-icons a {
+            color:lightgreen;
+            font-size: 30px;
+            margin: 15px;
+        }
+
+        .footer .social-icons a:hover {
+            color:orangered;
+           
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Top Navigation (Logo, Sign Up, Sign In) -->
+    <div class="top-nav">
+        <div class="logo">
+            <a href="home.html">SoulMatch</a>
+        </div>
+        <div class="auth-links">
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation (Sections like Home, Profile, Search) -->
+    <div class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="success-stories.html">Success Stories</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Find Your Perfect Match with SoulMatch</h1>
+            <p>Connecting hearts, creating futures.</p>
+            <a href="#signup" class="cta-button">Join Now</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-heading">Our Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <h3>Exclusive Matches</h3>
+                <p>We help you find the best match based on your preferences and values.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Verified Profiles</h3>
+                <p>All profiles are verified for authenticity to ensure trust and reliability.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Instant Messaging</h3>
+                <p>Chat with your matches in real-time to get to know each other better.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Privacy Protection</h3>
+                <p>Your privacy is our priority, and we use secure measures to protect your data.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-stories" id="success-stories">
+        <h2 class="section-heading">Success Stories</h2>
+        <div class="profile-cards-container">
+            
+            <div class="profile-card">
+                <img src="success_images/affectionate-indian-couple-celebrating-propose-day-together.jpg" alt="Story 1">
+                <h3>Ravi & Priya</h3>
+                <p>Businessman & Teacher</p>
+                <p>"We met through SoulMatch and our lives have changed forever. Grateful for this platform!"</p>
+            </div>
+
+           
+            <div class="profile-card">
+                <img src="success_images/indian-man-hugging-his-wife-karva-chauth-day_250865-334.jpg" alt="Story 2">
+                <h3>Vikram & Anita</h3>
+                <p>Engineer & Doctor</p>
+                <p>"SoulMatch brought us together. We are now happily married and building our future."</p>
+            </div>
+
+            
+            <div class="profile-card">
+                <img src="success_images/man-woman-purple-dress-are-standing-together_1113980-2212.avif" alt="Story 3">
+                <h3>Rajesh & Sunita</h3>
+                <p>Lawyer & Architect</p>
+                <p>"Thank you SoulMatch for helping us find our perfect match. We’re blessed to have each other!"</p>
+            </div>
+
+            
+            <div class="profile-card">
+                <img src="success_images/man-woman-smiling-posing-photo_1292296-3171.jpg" alt="Story 4">
+                <h3>Amir & Zara</h3>
+                <p>Entrepreneur & Artist</p>
+                <p>"We couldn't have asked for a better platform to connect. Our bond is stronger every day."</p>
+            </div>
+
+            
+            <div class="profile-card">
+                <img src="success_images/portrait-sweet-young-indian-lovers-hugging-orange_116547-59487.jpg" alt="Story 5">
+                <h3>Rahul & Neha</h3>
+                <p>Teacher & Fashion Designer</p>
+                <p>"SoulMatch not only helped us find love but also brought our dreams together!"</p>
+            </div>
+
+            <!-- Success Story 6 -->
+            <div class="profile-card">
+                <img src="success_images/a1.jpg" alt="Story 6">
+                <h3>Manoj & Kavya</h3>
+                <p>Doctor & Software Engineer</p>
+                <p>"We met on SoulMatch and realized we had everything in common. Now, we are married and happy!"</p>
+            </div>
+
+            
+            <div class="profile-card">
+                <img src="success_images/a2.webp" alt="Story 7">
+                <h3>Saurabh & Meera</h3>
+                <p>Writer & Journalist</p>
+                <p>"SoulMatch made our dreams come true. We are so grateful for this platform that helped us find each other."</p>
+            </div>
+
+            
+            <div class="profile-card">
+                <img src="success_images/a3.jpeg" alt="Story 8">
+                <h3>Akash & Pooja</h3>
+                <p>Business Owner & Teacher</p>
+                <p>"We connected through SoulMatch and now we’re living our dream life together. Thank you!"</p>
+            </div>
+
+            
+            <div class="profile-card">
+                <img src="success_images/a4.jpg" alt="Story 9">
+                <h3>Vishal & Neetu</h3>
+                <p>Chef & Photographer</p>
+                <p>"SoulMatch helped us realize what true love is. We’re so thankful for the connection!"</p>
+            </div>
+
+           
+            <div class="profile-card">
+                <img src="success_images/a5.webp" alt="Story 10">
+                <h3>Shubham & Simran</h3>
+                <p>Doctor & Teacher</p>
+                <p>"We met on SoulMatch and the journey of our life has been amazing ever since. Thank you for everything!"</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer  -->
+<footer class="footer">
+    <p>123 SoulMatch, Pune, India</p>
+    <p>Contact us: <strong>+123-456-7890</strong> | Email: <strong>info@SoulMatch143.com</strong></p>
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2024 SoulMatch. All rights reserved. | Powered By: <a style="text-decoration: none; color:white;" href="https://www.cybromatechtechnology.in/">cybromatech Technology Pvt Ltd,Pune</a></p>
+</footer>
+</body>
+</html>

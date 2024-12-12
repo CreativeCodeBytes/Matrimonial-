@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <link rel="icon" href="2.jpeg">
+    <style>
+         /* Top Nav Bar styling */
+         .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 10px 20px;
+        }
+
+        .top-nav .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .top-nav .auth-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .top-nav .auth-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Nav Bar styling */
+        .navbar {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .form-box {
+            background: url(images/back\ b.jpg);
+            background-size: cover;
+            width: 60%;
+            padding: 50px;
+            position: relative;
+            border: 3px solid blueviolet;
+            border-radius: 1px 90px 1px 1px;
+        }
+
+        .form-box h2 {
+            text-align: center;
+            color: rgb(47, 18, 179);
+            font-weight: 600;
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        .input-field label {
+            font-size: 18px;
+            font-weight: 600;
+            color: darkmagenta;
+        }
+
+        .input-field input,
+        .input-field select,
+        .input-field textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Biodata Display Section */
+        .biodata-box {
+            width: 70%;
+            padding: 50px;
+            background: url(images/back\ a.jpg);
+            background-size: cover;
+            border: 3px solid blueviolet;
+            border-radius: 1px 90px 1px 1px;
+            margin-top: 50px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+        }
+
+        .biodata-box h2 {
+            text-align: center;
+            color: rgb(47, 18, 179);
+            font-weight: 600;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .biodata-details {
+            display: grid;
+            width: 100%;
+        }
+
+        .biodata-details p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .img-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .edit-btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .edit-btn:hover {
+            background-color: #e55347;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+        /* Footer Styling */
+        .footer {
+            background:url(images/do-sharp.php);
+            background-size: cover;
+            backdrop-filter:blur;
+            width: 100%;
+            height: 200px;
+            color:black;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer .social-icons a {
+            color:lightgreen;
+            font-size: 30px;
+            margin: 15px;
+        }
+
+        .footer .social-icons a:hover {
+            color:orangered;
+           
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation (Logo, Sign Up, Sign In) -->
+    <div class="top-nav">
+        <div class="logo">
+            <a href="#">SoulMatch</a>
+        </div>
+        <div class="auth-links">
+            <a href="#">Sign Up</a>
+            <a href="#">Sign In</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation (Sections like Home, Profile, Search) -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="success-stories.html">Success Stories</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Form Section -->
+    <div class="container" id="formSection">
+        <div class="form-box">
+            <h2>Bio-data</h2>
+            <form id="biodataForm">
+                <!-- Profile Image Section -->
+                <div class="input-field">
+                    <label for="image">Profile Image</label>
+                    <input type="file" id="image" name="image" accept="image/*" style="background-color: white;">
+                </div>
+
+                <div class="input-field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
+                </div>
+                <div class="input-field">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="input-field">
+                    <label for="zodiac">Zodiac Sign</label>
+                    <select id="zodiac" name="zodiac" required>
+                        <option value="Aries">Aries</option>
+                        <option value="Taurus">Taurus</option>
+                        <option value="Gemini">Gemini</option>
+                        <option value="Cancer">Cancer</option>
+                        <option value="Leo">Leo</option>
+                        <option value="Virgo">Virgo</option>
+                        <option value="Libra">Libra</option>
+                        <option value="Scorpio">Scorpio</option>
+                        <option value="Sagittarius">Sagittarius</option>
+                        <option value="Capricorn">Capricorn</option>
+                        <option value="Aquarius">Aquarius</option>
+                        <option value="Pisces">Pisces</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="timeOfBirth">Time of Birth</label>
+                    <input type="time" id="timeOfBirth" name="timeOfBirth">
+                </div>
+                <div class="input-field">
+                    <label for="lineage">Lineage</label>
+                    <input type="text" id="lineage" name="lineage" placeholder="Enter Lineage (e.g., Royal, Brahmin)" required>
+                </div>
+                <div class="input-field">
+                    <label for="qualification">Qualification</label>
+                    <select id="qualification" name="qualification" required>
+                        <option value="Engineering">Engineering</option>
+                        <option value="BSc">BSc</option>
+                        <option value="MSc">MSc</option>
+                        <option value="Doctorate">Doctorate</option>
+                        <option value="MBBS">MBBS</option>
+                        <option value="Pharmacy">Pharmacy</option>
+                        <option value="ITI">ITI</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="height">Height</label>
+                    <input type="text" id="height" name="height" placeholder="Enter Height (e.g., 5'6")" required>
+                </div>
+                <div class="input-field">
+                    <label for="color">Complexion</label>
+                    <input type="text" id="color" name="color" placeholder="Enter Complexion" required>
+                </div>
+                <div class="input-field">
+                    <label for="bloodGroup">Blood Group</label>
+                    <select id="bloodGroup" name="bloodGroup" required>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="hobbies">Hobbies</label>
+                    <textarea id="hobbies" name="hobbies" placeholder="Enter Hobbies" required></textarea>
+                </div>
+
+                <!-- Family Details Section -->
+                <div class="input-field">
+                    <label for="fatherName">Father's Name</label>
+                    <input type="text" id="fatherName" name="fatherName" placeholder="Enter Father's Name" required>
+                </div>
+                <div class="input-field">
+                    <label for="fatherOccupation">Father's Occupation</label>
+                    <input type="text" id="fatherOccupation" name="fatherOccupation" placeholder="Enter Father's Occupation" required>
+                </div>
+                <div class="input-field">
+                    <label for="motherName">Mother's Name</label>
+                    <input type="text" id="motherName" name="motherName" placeholder="Enter Mother's Name" required>
+                </div>
+                <div class="input-field">
+                    <label for="brotherName">Brother's Name</label>
+                    <input type="text" id="brotherName" name="brotherName" placeholder="Enter Brother's Name">
+                </div>
+                <div class="input-field">
+                    <label for="brotherOccupation">Brother's Occupation</label>
+                    <input type="text" id="brotherOccupation" name="brotherOccupation" placeholder="Enter Brother's Occupation">
+                </div>
+                <div class="input-field">
+                    <label for="brotherMaritalStatus">Brother's Marital Status</label>
+                    <select id="brotherMaritalStatus" name="brotherMaritalStatus">
+                        <option value="Married">Married</option>
+                        <option value="Single">Single</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="sisterName">Sister's Name</label>
+                    <input type="text" id="sisterName" name="sisterName" placeholder="Enter Sister's Name">
+                </div>
+                <div class="input-field">
+                    <label for="sisterOccupation">Sister's Occupation</label>
+                    <input type="text" id="sisterOccupation" name="sisterOccupation" placeholder="Enter Sister's Occupation">
+                </div>
+                <div class="input-field">
+                    <label for="sisterMaritalStatus">Sister's Marital Status</label>
+                    <select id="sisterMaritalStatus" name="sisterMaritalStatus">
+                        <option value="Married">Married</option>
+                        <option value="Single">Single</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="caste">Caste</label>
+                    <input type="text" id="caste" name="caste" placeholder="Enter Caste" required>
+                </div>
+                <div class="input-field">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" placeholder="Enter Address" required></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="contact" placeholder="Enter Contact Number" required>
+                </div>
+
+                <button type="submit" class="btn">Save Biodata</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Biodata Display Section -->
+    <div class="container" id="displaySection" style="display: none;">
+        <div class="biodata-box">
+            <h2>Biodata</h2>
+            <div class="img-container">
+                <img id="profileImage" src="" alt="Profile Image">
+            </div>
+            <div class="biodata-details">
+                <div class="biodata-details-left">
+                    <p><strong>Name:</strong> <span id="displayName"></span></p>
+                    <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+                    <p><strong>Date of Birth:</strong> <span id="displayDob"></span></p>
+                    <p><strong>Zodiac Sign:</strong> <span id="displayZodiac"></span></p>
+                    <p><strong>Time of Birth:</strong> <span id="displayTimeOfBirth"></span></p>
+                    <p><strong>Lineage:</strong> <span id="displayLineage"></span></p>
+                    <p><strong>Qualification:</strong> <span id="displayQualification"></span></p>
+                    <p><strong>Height:</strong> <span id="displayHeight"></span></p>
+                    <p><strong>Color:</strong> <span id="displayColor"></span></p>
+                    <p><strong>Blood Group:</strong> <span id="displayBloodGroup"></span></p>
+                    <p><strong>Hobbies:</strong> <span id="displayHobbies"></span></p>
+                </div>
+                <div class="biodata-details-left">
+                    <p><strong>Father's Name:</strong> <span id="displayFatherName"></span></p>
+                    <p><strong>Father's Occupation:</strong> <span id="displayFatherOccupation"></span></p>
+                    <p><strong>Mother's Name:</strong> <span id="displayMotherName"></span></p>
+                    <p><strong>Brother's Name:</strong> <span id="displayBrotherName"></span></p>
+                    <p><strong>Brother's Occupation:</strong> <span id="displayBrotherOccupation"></span></p>
+                    <p><strong>Brother's Marital Status:</strong> <span id="displayBrotherMaritalStatus"></span></p>
+                    <p><strong>Sister's Name:</strong> <span id="displaySisterName"></span></p>
+                    <p><strong>Sister's Occupation:</strong> <span id="displaySisterOccupation"></span></p>
+                    <p><strong>Sister's Marital Status:</strong> <span id="displaySisterMaritalStatus"></span></p>
+                    <p><strong>Caste:</strong> <span id="displayCaste"></span></p>
+                    <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+                    <p><strong>Contact:</strong> <span id="displayContact"></span></p>
+                </div>
+            </div>
+            <button class="edit-btn" onclick="showForm()">Edit Bio-data</button>
+        </div>
+    </div>
+
+    <script>
+        // Show input form and clear any previous data
+        function showForm() {
+            document.getElementById('formSection').style.display = 'block';
+            document.getElementById('displaySection').style.display = 'none';
+
+            // Clear the form fields
+            document.getElementById('biodataForm').reset();
+
+            // Remove the image preview
+            document.getElementById('profileImage').src = '';
+
+            // Clear localStorage if you want the page to be completely reset
+            localStorage.removeItem('biodata');
+        }
+
+        // Show saved biodata
+        function showBiodata() {
+            const savedBiodata = JSON.parse(localStorage.getItem('biodata'));
+            if (!savedBiodata) return;
+
+            // Set the image
+            if (savedBiodata.image) {
+                document.getElementById('profileImage').src = savedBiodata.image;
+            }
+
+            document.getElementById('displayName').textContent = savedBiodata.name;
+            document.getElementById('displayGender').textContent = savedBiodata.gender;
+            document.getElementById('displayDob').textContent = savedBiodata.dob;
+            document.getElementById('displayZodiac').textContent = savedBiodata.zodiac;
+            document.getElementById('displayTimeOfBirth').textContent = savedBiodata.timeOfBirth;
+            document.getElementById('displayLineage').textContent = savedBiodata.lineage;
+            document.getElementById('displayQualification').textContent = savedBiodata.qualification;
+            document.getElementById('displayHeight').textContent = savedBiodata.height;
+            document.getElementById('displayColor').textContent = savedBiodata.color;
+            document.getElementById('displayBloodGroup').textContent = savedBiodata.bloodGroup;
+            document.getElementById('displayHobbies').textContent = savedBiodata.hobbies;
+
+            document.getElementById('displayFatherName').textContent = savedBiodata.fatherName;
+            document.getElementById('displayFatherOccupation').textContent = savedBiodata.fatherOccupation;
+            document.getElementById('displayMotherName').textContent = savedBiodata.motherName;
+            document.getElementById('displayBrotherName').textContent = savedBiodata.brotherName;
+            document.getElementById('displayBrotherOccupation').textContent = savedBiodata.brotherOccupation;
+            document.getElementById('displayBrotherMaritalStatus').textContent = savedBiodata.brotherMaritalStatus;
+            document.getElementById('displaySisterName').textContent = savedBiodata.sisterName;
+            document.getElementById('displaySisterOccupation').textContent = savedBiodata.sisterOccupation;
+            document.getElementById('displaySisterMaritalStatus').textContent = savedBiodata.sisterMaritalStatus;
+            document.getElementById('displayCaste').textContent = savedBiodata.caste;
+            document.getElementById('displayAddress').textContent = savedBiodata.address;
+            document.getElementById('displayContact').textContent = savedBiodata.contact;
+
+            document.getElementById('formSection').style.display = 'none';
+            document.getElementById('displaySection').style.display = 'block';
+        }
+
+        // Reset the form automatically after saving the biodata to localStorage (optional)
+        document.getElementById('biodataForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const biodata = {
+                name: document.getElementById('name').value,
+                gender: document.getElementById('gender').value,
+                dob: document.getElementById('dob').value,
+                zodiac: document.getElementById('zodiac').value,
+                timeOfBirth: document.getElementById('timeOfBirth').value,
+                lineage: document.getElementById('lineage').value,
+                qualification: document.getElementById('qualification').value,
+                height: document.getElementById('height').value,
+                color: document.getElementById('color').value,
+                bloodGroup: document.getElementById('bloodGroup').value,
+                hobbies: document.getElementById('hobbies').value,
+                fatherName: document.getElementById('fatherName').value,
+                fatherOccupation: document.getElementById('fatherOccupation').value,
+                motherName: document.getElementById('motherName').value,
+                brotherName: document.getElementById('brotherName').value,
+                brotherOccupation: document.getElementById('brotherOccupation').value,
+                brotherMaritalStatus: document.getElementById('brotherMaritalStatus').value,
+                sisterName: document.getElementById('sisterName').value,
+                sisterOccupation: document.getElementById('sisterOccupation').value,
+                sisterMaritalStatus: document.getElementById('sisterMaritalStatus').value,
+                caste: document.getElementById('caste').value,
+                address: document.getElementById('address').value,
+                contact: document.getElementById('contact').value,
+            };
+
+            const imageFile = document.getElementById('image').files[0];
+            if (imageFile) {
+                const reader = new FileReader();
+                reader.onloadend = function () {
+                    biodata.image = reader.result;
+                    localStorage.setItem('biodata', JSON.stringify(biodata));
+                    showBiodata();
+                };
+                reader.readAsDataURL(imageFile);
+            } else {
+                localStorage.setItem('biodata', JSON.stringify(biodata));
+                showBiodata();
+            }
+        });
+
+        // Check if biodata is already saved in localStorage
+        window.onload = function () {
+            showBiodata();
+        };
+    </script>
+    <footer class="footer">
+        <p>123 SoulMatch, Pune, India</p>
+        <p>Contact us: <strong>+123-456-7890</strong> | Email: <strong>info@SoulMatch143.com</strong></p>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2024 SoulMatch. All rights reserved. | Powered By: <a style="text-decoration: none; color:white;" href="https://www.cybromatechtechnology.in/">cybromatech Technology Pvt Ltd,Pune</a></p>
+    </footer>
+    
+</body>
+
+</html>
